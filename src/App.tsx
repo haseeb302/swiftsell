@@ -7,6 +7,7 @@ import Home from "./components/Pages/Home";
 import ItemDetail from "./components/Pages/ItemDetail";
 import Post from "./components/Pages/Post";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Chat from "./components/Pages/Chat";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/chat" element={<Chat />} />
         <Route path="/item/:id" element={<ItemDetail />} />
         <Route path="/create-post" element={<Post />} />
       </Routes>

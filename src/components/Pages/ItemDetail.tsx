@@ -181,7 +181,7 @@ export class ItemDetail extends Component<
                 </p>
               </div>
               <div className="flex-1 self-center">
-                <Link to={"/"}>
+                <Link to={"/chat"}>
                   <button className="float-right">
                     <ArrowCircleRightIcon className="w-8 h-8" />
                   </button>
@@ -189,7 +189,7 @@ export class ItemDetail extends Component<
               </div>
             </div>
             <div className="block">
-              <Link to={"/"}>
+              <Link to={"/chat"}>
                 <button className="p-4 bg-gray-900 text-white text-center mt-2 rounded-md w-full hover:bg-gray-800">
                   Chat with seller
                 </button>
