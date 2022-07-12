@@ -10,8 +10,8 @@ const Item: React.FC<ItemProps> = ({ item }) => {
   return (
     <>
       <Link to={`/item/${item.id}`}>
-        <div className="group relative border rounded-lg">
-          <div className="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
+        <div className="group relative border rounded-lg bg-white">
+          <div className="w-full min-h-80 border-b-2 bg-gray-200 aspect-w-1 aspect-h-1 overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
             {item.images.map((image: any) => (
               <img
                 src={image.src}

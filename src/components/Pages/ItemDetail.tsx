@@ -78,7 +78,7 @@ export class ItemDetail extends Component<
               className="w-full h-full object-center object-cover lg:w-full lg:h-full"
             />
           </div>
-          <div className="mt-4">
+          <div className="mt-4 p-4 border rounded-lg bg-white">
             <div className="grid grid-cols-6 gap-x-2">
               {item?.images.map((image: any) => (
                 <div className="aspect-w-1 aspect-h-1 border rounded-lg overflow-hidden">
@@ -91,7 +91,7 @@ export class ItemDetail extends Component<
               ))}
             </div>
           </div>
-          <div className="p-4 border rounded-lg w-full mt-2">
+          <div className="p-4 border rounded-lg w-full mt-2 bg-white">
             <h1 className="font-bold text-lg text-gray-800">Details</h1>
             <hr />
             <div className="grid grid-cols-2 gap-x-4 gap-y-4 mt-4">
@@ -134,7 +134,7 @@ export class ItemDetail extends Component<
           </div>
         </div>
         <div className="">
-          <div className="grid grid-cols-2 gap-x-2 p-4 border rounded-lg w-full">
+          <div className="grid grid-cols-2 gap-x-2 p-4 border rounded-lg w-full bg-white">
             <div className="">
               <h1 className="font-bold text-3xl text-gray-700">
                 Rs {item?.price}
@@ -163,7 +163,7 @@ export class ItemDetail extends Component<
               </div>
             </div>
           </div>
-          <div className="grid grid-flow-row grid-rows-3 p-4 border rounded-lg w-full mt-2">
+          <div className="grid grid-flow-row grid-rows-3 bg-white p-4 border rounded-lg w-full mt-2">
             <div className="mb-0">
               <h1 className="font-semibold text-lg text-gray-700">
                 Seller Description

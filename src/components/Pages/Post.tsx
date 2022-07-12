@@ -4,7 +4,7 @@ interface PostProps {}
 
 const Post: React.FC<PostProps> = () => {
   return (
-    <div className=" max-w-4xl mx-auto mt-32 border p-4 rounded-md">
+    <div className=" max-w-4xl mx-auto mt-32 border p-4 rounded-md bg-white">
       <div>
         <h2 className="font-bold text-center text-4xl text-gray-800 my-4">
           Post your ad!
