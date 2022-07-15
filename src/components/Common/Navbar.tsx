@@ -2,7 +2,7 @@
 import React, { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import {
-  BellIcon,
+  ChatAltIcon,
   MenuIcon,
   XIcon,
   SearchIcon,
@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 interface NavbarProps {}
 
 const Navbar: React.FC<NavbarProps> = () => {
-  const isAuth = true;
+  const isAuth = false;
   const navigation = [
     {
       name: "Home",
@@ -92,8 +92,8 @@ const Navbar: React.FC<NavbarProps> = () => {
                   className="w-full"
                   placeholder="Find Mobiles, Cars and more..."
                 />
-                <button className="bg-gray-400 px-2">
-                  <SearchIcon className="w-6 h-6 text-black" />
+                <button className="bg-gray-900 px-2">
+                  <SearchIcon className="w-6 h-6 text-white" />
                 </button>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
@@ -119,13 +119,15 @@ const Navbar: React.FC<NavbarProps> = () => {
                           </Link>
                         )
                     )}
-                    <button
-                      type="button"
-                      className="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
-                    >
-                      <span className="sr-only">View notifications</span>
-                      <BellIcon className="h-6 w-6" aria-hidden="true" />
-                    </button>
+                    <Link to="/chat">
+                      <button
+                        type="button"
+                        className="bg-gray-800 p-2 rounded-full text-white border-2 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                      >
+                        <span className="sr-only">View notifications</span>
+                        <ChatAltIcon className="h-6 w-6" aria-hidden="true" />
+                      </button>
+                    </Link>
                     <Menu as="div" className="ml-3 relative">
                       <div>
                         <Menu.Button className="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
@@ -146,14 +148,14 @@ const Navbar: React.FC<NavbarProps> = () => {
                         leaveFrom="transform opacity-100 scale-100"
                         leaveTo="transform opacity-0 scale-95"
                       >
-                        <Menu.Items className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+                        <Menu.Items className="origin-top-right z-10 absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
                           <Menu.Item>
                             {({ active }) => (
                               <Link to={""}>
                                 <button
                                   className={classNames(
                                     active ? "bg-gray-100" : "",
-                                    "block px-4 py-2 text-sm text-gray-700"
+                                    "block px-4 py-2 text-sm text-gray-700 w-full"
                                   )}
                                 >
                                   Your Profile
@@ -167,7 +169,7 @@ const Navbar: React.FC<NavbarProps> = () => {
                                 <button
                                   className={classNames(
                                     active ? "bg-gray-100" : "",
-                                    "block px-4 py-2 text-sm text-gray-700"
+                                    "block px-4 py-2 text-sm text-gray-700 w-full"
                                   )}
                                 >
                                   Settings
@@ -181,7 +183,7 @@ const Navbar: React.FC<NavbarProps> = () => {
                                 <button
                                   className={classNames(
                                     active ? "bg-gray-100" : "",
-                                    "block px-4 py-2 text-sm text-gray-700"
+                                    "block px-4 py-2 text-sm text-gray-700 w-full"
                                   )}
                                 >
                                   Sign out

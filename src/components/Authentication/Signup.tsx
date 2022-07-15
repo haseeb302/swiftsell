@@ -4,7 +4,7 @@ interface SignupProps {}
 
 const Signup: React.FC<SignupProps> = () => {
   return (
-    <div className="max-w-xl mx-auto mt-32 border rounded p-8">
+    <div className="max-w-xl mx-auto mt-32 border rounded p-8 bg-white">
       <div>
         <h2 className="font-bold text-center text-5xl text-gray-800">
           Create Account

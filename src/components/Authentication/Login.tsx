@@ -4,10 +4,10 @@ interface LoginProps {}
 
 const Login: React.FC<LoginProps> = () => {
   return (
-    <div className="max-w-xl mx-auto mt-32 border p-8 rounded">
+    <div className="max-w-xl mx-auto mt-32 border p-8 rounded bg-white">
       <div>
         <h2 className="font-bold text-center text-5xl text-gray-800">
-          SwiftSell
+          SwiftSell.
         </h2>
       </div>
       <form className="grid grid-cols-1 gap-6 mt-12">

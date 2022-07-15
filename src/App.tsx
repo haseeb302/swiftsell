@@ -8,21 +8,25 @@ import ItemDetail from "./components/Pages/ItemDetail";
 import Post from "./components/Pages/Post";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Chat from "./components/Pages/Chat";
+import { Provider } from "react-redux";
+import { store } from "./store/store";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/chat" element={<Chat />} />
-        <Route path="/item/:id" element={<ItemDetail />} />
-        <Route path="/create-post" element={<Post />} />
-      </Routes>
-      <Footer />
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/chat" element={<Chat />} />
+          <Route path="/item/:id" element={<ItemDetail />} />
+          <Route path="/create-post" element={<Post />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </Provider>
   );
 }
 

@@ -212,3 +212,98 @@ Oppo A76 6 GB Ram 128 GB Rom | Advance Amount 9,900 |  Monthly Installment   3,0
     },
   },
 ];
+
+export const chatList = [
+  {
+    id: 1,
+    user_id: "001",
+    name: "James Bond",
+    last_message: "How are you?",
+    last_message_sent: "1 hour ago",
+    profile_img: "https://i.pravatar.cc/300?img=1",
+  },
+  {
+    id: 2,
+    user_id: "011",
+    name: "Waqar Khattak",
+    last_message: "kidr hai?",
+    last_message_sent: "10 min ago",
+    profile_img:
+      "https://www.olx.com.pk/assets/iconProfilePicture.7975761176487dc62e25536d9a36a61d.png",
+  },
+  {
+    id: 3,
+    user_id: "111",
+    name: "Ali Haider",
+    last_message: "Agya?",
+    last_message_sent: "10 min ago",
+    profile_img: "https://i.pravatar.cc/300?img=2",
+  },
+];
+
+export const messages = [
+  {
+    id: 1,
+    chat_id: 1,
+    sender_user_id: "111",
+    receiver_user_id: "000",
+    message: "Aja",
+    created_at: "1 minute ago",
+  },
+  {
+    id: 2,
+    chat_id: 1,
+    sender_user_id: "000",
+    receiver_user_id: "111",
+    message: "Let's go to dinner",
+    created_at: "2 minute ago",
+  },
+  {
+    id: 3,
+    chat_id: 1,
+    sender_user_id: "111",
+    receiver_user_id: "000",
+    message: "Ghar hu.",
+    created_at: "5 minute ago",
+  },
+  {
+    id: 4,
+    chat_id: 1,
+    sender_user_id: "000",
+    receiver_user_id: "111",
+    message: "Meh b theek? kidr Ha?",
+    created_at: "6 minute ago",
+  },
+  {
+    id: 5,
+    chat_id: 1,
+    sender_user_id: "111",
+    receiver_user_id: "000",
+    message: "I am good? How are you?",
+    created_at: "7 minute ago",
+  },
+  {
+    id: 6,
+    chat_id: 1,
+    sender_user_id: "000",
+    receiver_user_id: "111",
+    message: "How are you?",
+    created_at: "10 minute ago",
+  },
+  {
+    id: 7,
+    chat_id: 2,
+    sender_user_id: "111",
+    receiver_user_id: "000",
+    message: "Aja",
+    created_at: "1 minute ago",
+  },
+  {
+    id: 8,
+    chat_id: 2,
+    sender_user_id: "000",
+    receiver_user_id: "111",
+    message: "Let's go to dinner",
+    created_at: "2 minute ago",
+  },
+];

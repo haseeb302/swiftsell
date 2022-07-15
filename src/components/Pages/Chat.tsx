@@ -5,9 +5,13 @@ import Pagination from "../Common/Pagination";
 import { items } from "../../data";
 import ChatList from "../Common/ChatList";
 import { EmojiHappyIcon, ChevronRightIcon } from "@heroicons/react/outline";
+import { messages, chatList } from "../../data";
 
 export class Chat extends Component {
   render() {
+    const user_id = "000";
+    const cList = chatList[0];
+    const chat = messages.filter((chat) => chat.chat_id === cList.id).reverse();
     return (
       <div>
         <div className="flex flex-1 overflow-hidden h-screen max-w-screen-2xl m-auto">
@@ -16,246 +20,36 @@ export class Chat extends Component {
               <ChatList />
               <section className="relative max-h-full h-full bg-white rounded-lg w-full flex flex-col lg:flex hidden">
                 <div className="flex-1 overflow-y-scroll p-5 scrollbar-thumb-color scrollbar-width space-y-5">
-                  {/* // Left */}
-                  <div className="flex justify-start">
-                    <div className="w-14 mr-5">
-                      <img
-                        className="rounded-full w-full mr-2"
-                        src="https://i.pravatar.cc/300?img=3"
-                      />
-                    </div>
-                    <div className="flex flex-col space-y-5 text-left">
-                      <div>
-                        <span className="bg-gray-100 text-gray-900 p-5 text-base rounded-r-lg rounded-b-lg inline flex max-w-xl">
-                          How are you bro?
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  {/* // Left */}
-                  <div className="flex justify-start">
-                    <div className="w-14 mr-5">
-                      <img
-                        className="rounded-full w-full mr-2"
-                        src="https://i.pravatar.cc/300?img=3"
-                      />
-                    </div>
-                    <div className="flex flex-col space-y-5 text-left">
-                      <div>
-                        <span className="bg-gray-100 text-gray-900 p-5 text-base rounded-r-lg rounded-b-lg inline flex max-w-xl">
-                          How are you bro?
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  {/* // Left */}
-                  <div className="flex justify-start">
-                    <div className="w-14 mr-5">
-                      <img
-                        className="rounded-full w-full mr-2"
-                        src="https://i.pravatar.cc/300?img=3"
-                      />
-                    </div>
-                    <div className="flex flex-col space-y-5 text-left">
-                      <div>
-                        <span className="bg-gray-100 text-gray-900 p-5 text-base rounded-r-lg rounded-b-lg inline flex max-w-xl">
-                          How are you bro?
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  {/* // Left */}
-                  <div className="flex justify-start">
-                    <div className="w-14 mr-5">
-                      <img
-                        className="rounded-full w-full mr-2"
-                        src="https://i.pravatar.cc/300?img=3"
-                      />
-                    </div>
-                    <div className="flex flex-col space-y-5 text-left">
-                      <div>
-                        <span className="bg-gray-100 text-gray-900 p-5 text-base rounded-r-lg rounded-b-lg inline flex max-w-xl">
-                          How are you bro?
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  {/* // Left */}
-                  <div className="flex justify-start">
-                    <div className="w-14 mr-5">
-                      <img
-                        className="rounded-full w-full mr-2"
-                        src="https://i.pravatar.cc/300?img=3"
-                      />
-                    </div>
-                    <div className="flex flex-col space-y-5 text-left">
-                      <div>
-                        <span className="bg-gray-100 text-gray-900 p-5 text-base rounded-r-lg rounded-b-lg inline flex max-w-xl">
-                          How are you bro?
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  {/* // Left */}
-                  <div className="flex justify-start">
-                    <div className="w-14 mr-5">
-                      <img
-                        className="rounded-full w-full mr-2"
-                        src="https://i.pravatar.cc/300?img=3"
-                      />
-                    </div>
-                    <div className="flex flex-col space-y-5 text-left">
-                      <div>
-                        <span className="bg-gray-100 text-gray-900 p-5 text-base rounded-r-lg rounded-b-lg inline flex max-w-xl">
-                          How are you bro?
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  {/* // Left */}
-                  <div className="flex justify-start">
-                    <div className="w-14 mr-5">
-                      <img
-                        className="rounded-full w-full mr-2"
-                        src="https://i.pravatar.cc/300?img=3"
-                      />
-                    </div>
-                    <div className="flex flex-col space-y-5 text-left">
-                      <div>
-                        <span className="bg-gray-100 text-gray-900 p-5 text-base rounded-r-lg rounded-b-lg inline flex max-w-xl">
-                          How are you bro?
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  {/* // Right */}
-                  <div className="flex justify-end">
-                    <div className="space-y-5 text-right">
-                      <div className="bg-indigo-800 text-white p-5 text-base rounded-l-lg rounded-b-lg inline-block max-w-xl">
-                        I'm good bro how are you?
-                      </div>
-                    </div>
-                  </div>
-                  {/* // Left */}
-                  <div className="flex justify-start">
-                    <div className="w-14 mr-5">
-                      <img
-                        className="rounded-full w-full mr-2"
-                        src="https://i.pravatar.cc/300?img=3"
-                      />
-                    </div>
-                    <div className="flex flex-col space-y-5 text-left">
-                      <div>
-                        <span className="bg-gray-100 text-gray-900 p-5 text-base rounded-r-lg rounded-b-lg inline flex max-w-xl">
-                          How are you bro?
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  {/* // Left */}
-                  <div className="flex justify-start">
-                    <div className="w-14 mr-5">
-                      <img
-                        className="rounded-full w-full mr-2"
-                        src="https://i.pravatar.cc/300?img=3"
-                      />
-                    </div>
-                    <div className="flex flex-col space-y-5 text-left">
-                      <div>
-                        <span className="bg-gray-100 text-gray-900 p-5 text-base rounded-r-lg rounded-b-lg inline flex max-w-xl">
-                          How are you bro?
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  {/* // Right */}
-                  <div className="flex justify-end">
-                    <div className="space-y-5 text-right">
-                      <div className="bg-indigo-800 text-white p-5 text-base rounded-l-lg rounded-b-lg inline-block max-w-xl">
-                        I'm good bro how are you?
-                      </div>
-                    </div>
-                  </div>
-                  {/* // Right */}
-                  <div className="flex justify-end">
-                    <div className="space-y-5 text-right">
-                      <div className="bg-indigo-800 text-white p-5 text-base rounded-l-lg rounded-b-lg inline-block max-w-xl">
-                        I'm good bro how are you?
-                      </div>
-                    </div>
-                  </div>
-                  {/* // Right */}
-                  <div className="flex justify-end">
-                    <div className="space-y-5 text-right">
-                      <div className="bg-indigo-800 text-white p-5 text-base rounded-l-lg rounded-b-lg inline-block max-w-xl">
-                        I'm good bro how are you?
-                      </div>
-                    </div>
-                  </div>
-                  {/* // Right */}
-                  <div className="flex justify-end">
-                    <div className="space-y-5 text-right">
-                      <div className="bg-indigo-800 text-white p-5 text-base rounded-l-lg rounded-b-lg inline-block max-w-xl">
-                        I'm good bro how are you?
-                      </div>
-                    </div>
-                  </div>
-                  {/* // Left */}
-                  <div className="flex justify-start">
-                    <div className="w-14 mr-5">
-                      <img
-                        className="rounded-full w-full mr-2"
-                        src="https://i.pravatar.cc/300?img=3"
-                      />
-                    </div>
-                    <div className="flex flex-col space-y-5 text-left">
-                      <div>
-                        <span className="bg-gray-100 text-gray-900 p-5 text-base rounded-r-lg rounded-b-lg inline flex max-w-xl">
-                          How are you bro?
-                        </span>
-                      </div>
-                    </div>
-                  </div>{" "}
-                  {/* // Right */}
-                  <div className="flex justify-end">
-                    <div className="space-y-5 text-right">
-                      <div className="bg-indigo-800 text-white p-5 text-base rounded-l-lg rounded-b-lg inline-block max-w-xl">
-                        I'm good bro how are you?
-                      </div>
-                    </div>
-                  </div>{" "}
-                  {/* // Right */}
-                  <div className="flex justify-end">
-                    <div className="space-y-5 text-right">
-                      <div className="bg-indigo-800 text-white p-5 text-base rounded-l-lg rounded-b-lg inline-block max-w-xl">
-                        I'm good bro how are you?
-                      </div>
-                    </div>
-                  </div>{" "}
-                  {/* // Left */}
-                  <div className="flex justify-start">
-                    <div className="w-14 mr-5">
-                      <img
-                        className="rounded-full w-full mr-2"
-                        src="https://i.pravatar.cc/300?img=3"
-                      />
-                    </div>
-                    <div className="flex flex-col space-y-5 text-left">
-                      <div>
-                        <span className="bg-gray-100 text-gray-900 p-5 text-base rounded-r-lg rounded-b-lg inline flex max-w-xl">
-                          How are you bro?
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  {/* // Right */}
-                  <div className="flex justify-end">
-                    <div className="space-y-5 text-right">
-                      <div className="bg-indigo-800 text-white p-5 text-base rounded-l-lg rounded-b-lg inline-block max-w-xl">
-                        I'm good bro how are you?
-                      </div>
-                    </div>
-                  </div>
+                  {chat.map((message) => (
+                    <>
+                      {/* Left */}
+                      {message.sender_user_id !== user_id ? (
+                        <div className="flex justify-start">
+                          <div className="w-14 mr-5">
+                            <img
+                              className="rounded-full w-full mr-2"
+                              src={cList.profile_img}
+                            />
+                          </div>
+                          <div className="flex flex-col space-y-5 text-left">
+                            <div>
+                              <span className="bg-gray-100 text-gray-900 p-5 text-base rounded-r-lg rounded-b-lg inline flex max-w-xl">
+                                {message.message}
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      ) : (
+                        <div className="flex justify-end">
+                          <div className="space-y-5 text-right">
+                            <div className="bg-indigo-800 text-white p-5 text-base rounded-l-lg rounded-b-lg inline-block max-w-xl">
+                              {message.message}
+                            </div>
+                          </div>
+                        </div>
+                      )}
+                    </>
+                  ))}
                 </div>
                 <div className="flex-none p-5">
                   <div>
